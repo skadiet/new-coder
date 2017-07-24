@@ -5,6 +5,7 @@ import csv
 MY_FILE = '../data/sample_sfpd_incident_all.csv'
 
 def parse(raw_file, delimiter):
+    '''This code accepts a raw csv file and parses out the json'''    
 
     #open csv file
     opened_file = open(raw_file)
