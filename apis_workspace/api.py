@@ -172,6 +172,16 @@ def generate_plot(platforms, output_file):
     #uncomment if you want to save the file
     #plt.savefig(output_file, dpi=72)
 
+def generate_csv(platforms, output_file):
+    dataset = tablib.Dataset(headers=['Abbreviation', 'Name', 'Year', 'Price', 'Adjusted Price'])
+    for p in platforms:
+        dataset.append([p['abbreviation'],p['name'], p['year'], p['original_price'], p['adjusted_price']])
+    if isinstance(output_file, basestring):
+        with open(output_file, 'w+') as fp:
+            fp.write(dataset.csv)
+    else:
+        output_file.write(dataset.csv)
+
 def main():
     a = list(GiantbombAPI('c778a444e694e45e1a2fffcbf6d906a9d528052e'))
     print(a)
