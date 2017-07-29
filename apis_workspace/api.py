@@ -4,6 +4,8 @@ import numpy as np
 import requests
 import logging
 import argparse
+import tablib
+import os
 
 CPI_DATA_URL = 'http://research.stlouisfed.org/fred2/data/CPIAUCSL.txt'
 
@@ -32,8 +34,9 @@ class CPIData(object):
         current_year = None
         year_cpi = []
         for line in fp:
-            while not line.startswith('Date'):
-                pass
+            if line.startswith('DATE '):
+                break
+        for line in fp:
             data = line.rstrip().split()
             year = int(data[0].split('-')[0])
             cpi = float(data[1])
@@ -65,7 +68,6 @@ class CPIData(object):
 
 class GiantbombAPI(object):
     """This is the API to Giantbomb.com"""
-    MY_KEY = 'c778a444e694e45e1a2fffcbf6d906a9d528052e'
     base_url = 'http://www.giantbomb.com/api'
 
     def __init__(self, api_key):
@@ -114,8 +116,8 @@ class GiantbombAPI(object):
                 if 'original_price' in item and item['original_price']:
                     item['original_price'] = float(item['original_price'])
 
-            yield item
-            counter +=1
+                yield item
+                counter +=1
 
 def is_valid_dataset(platform):
     """Filters out datasets that we can't use since they are either lacking
@@ -149,7 +151,8 @@ def generate_plot(platforms, output_file):
             continue #i.e. skip
         if len(name)>15:
             name=platform['abbreviation']
-        labels.insert(0,u"{0}\n$ {1}\n$ {2}".format(name, price, round(adjusted_price,2)))
+        #This needs to be changed in the demo
+        labels.insert(0,u"{0}\n$ {1}\n$ {2}".format(name, price, round(adapted_price,2)))
         values.insert(0, adapted_price)
 
     #define the size of the bar and size of the graph    
@@ -169,7 +172,7 @@ def generate_plot(platforms, output_file):
     fig.autofmt_xdate()
     plt.grid(True)
 
-    plt.show(dpi=72)    
+    #plt.show(dpi=72)    
     #uncomment if you want to save the file
     plt.savefig(output_file, dpi=72)
 
@@ -183,8 +186,8 @@ def generate_csv(platforms, output_file):
     else:
         output_file.write(dataset.csv)
 
-def arg_parse():
-    parser = arparse.ArgumentParser()
+def parse_args():
+    parser = argparse.ArgumentParser()
     parser.add_argument('--giantbomb-api-key', required=True, help='API key provided by Giantbomb.com')
     parser.add_argument('--cpi-file',
                         default=os.path.join(os.path.dirname(__file__),
@@ -210,7 +213,6 @@ def arg_parse():
     return opts
 
 def main():
-    #a = list(GiantbombAPI('c778a444e694e45e1a2fffcbf6d906a9d528052e'))
     opts = parse_args()
 
     if opts.debug:
@@ -237,10 +239,7 @@ def main():
 
     # Now that we have everything in place, fetch the platforms and calculate
     # their current price in relation to the CPI value.
-    for platform in gb_api.get_platforms(sort='release_date:desc',
-                                         field_list=['release_date',
-                                                     'original_price', 'name',
-                                                     'abbreviation']):
+    for platform in gb_api.get_platforms(sort='release_date:desc',field_list=['release_date','original_price', 'name','abbreviation']):
         # Some platforms don't have a release date or price yet. These we have
         # to skip.
         if not is_valid_dataset(platform):
