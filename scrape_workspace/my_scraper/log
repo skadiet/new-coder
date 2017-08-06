@@ -1,0 +1,299 @@
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: 6: /home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: source: not found
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: 8: /home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: scrapy: not found
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: 6: /home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: source: not found
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: 8: /home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: scrapy: not found
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scrape.sh: 7: .: Can't open /ScrapeProj/bin/activate
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scraper_app/spiders/livingsocial_spider.py:11: ScrapyDeprecationWarning: scraper_app.spiders.livingsocial_spider.LivingSocialSpider inherits from deprecated class scrapy.spider.BaseSpider, please inherit from scrapy.spider.Spider. (warning only on first subclass, there may be others)
+  class LivingSocialSpider(BaseSpider):
+2017-08-05 20:17:01-0500 [scrapy] INFO: Scrapy 0.24.4 started (bot: livingsocial)
+2017-08-05 20:17:01-0500 [scrapy] INFO: Optional features available: ssl, http11
+2017-08-05 20:17:01-0500 [scrapy] INFO: Overridden settings: {'SPIDER_MODULES': ['scraper_app.spiders'], 'BOT_NAME': 'livingsocial'}
+2017-08-05 20:17:01-0500 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2017-08-05 20:17:01-0500 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2017-08-05 20:17:01-0500 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+/home/hyatts/.virtualenvs/ScrapeProj/local/lib/python2.7/site-packages/scrapy/contrib/pipeline/__init__.py:21: ScrapyDeprecationWarning: ITEM_PIPELINES defined as a list or a set is deprecated, switch to a dict
+  category=ScrapyDeprecationWarning, stacklevel=1)
+2017-08-05 20:17:01-0500 [scrapy] INFO: Enabled item pipelines: LivingSocialPipeline
+2017-08-05 20:17:01-0500 [livingsocial_spider] INFO: Spider opened
+2017-08-05 20:17:01-0500 [livingsocial_spider] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-05 20:17:01-0500 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-05 20:17:01-0500 [scrapy] DEBUG: Web service listening on 127.0.0.1:6080
+2017-08-05 20:17:01-0500 [livingsocial_spider] DEBUG: Redirecting (301) to <GET https://www.livingsocial.com/cities/6-chicago> from <GET http://livingsocial.com/cities/6-chicago>
+2017-08-05 20:17:02-0500 [livingsocial_spider] DEBUG: Redirecting (301) to <GET http://www.livingsocial.com/local/chicago> from <GET https://www.livingsocial.com/cities/6-chicago>
+2017-08-05 20:17:02-0500 [livingsocial_spider] DEBUG: Redirecting (301) to <GET https://www.livingsocial.com/local/chicago> from <GET http://www.livingsocial.com/local/chicago>
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Crawled (200) <GET https://www.livingsocial.com/local/chicago> (referer: None)
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scraper_app/spiders/livingsocial_spider.py:45: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  selector = HtmlXPathSelector(response)
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scraper_app/spiders/livingsocial_spider.py:48: ScrapyDeprecationWarning: Call to deprecated function select. Use .xpath() instead.
+  for deal in selector.select(self.deals_list_xpath):
+/home/hyatts/.virtualenvs/ScrapeProj/local/lib/python2.7/site-packages/scrapy/selector/unified.py:106: ScrapyDeprecationWarning: scrapy.selector.HtmlXPathSelector is deprecated, instantiate scrapy.Selector instead.
+  for x in result]
+/home/hyatts/projects/new-coder/scrape_workspace/my_scraper/scraper_app/spiders/livingsocial_spider.py:49: ScrapyDeprecationWarning: scrapy.contrib.loader.XPathItemLoader is deprecated, instantiate scrapy.contrib.loader.ItemLoader instead.
+  loader = XPathItemLoader(LivingSocialDeal(), selector=deal)
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/chicago-line-cruises-5',
+	 'original_price': u'$86',
+	 'price': u'$64',
+	 'title': u'90-Minute Architectural Boat Tour for Two at Chicago Line Cruises (Up to 26% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/chicago-trolley-and-double-decker-company-8',
+	 'original_price': u'$39',
+	 'price': u'$30.99',
+	 'title': u'24 or 48-Hour Passes to Guided Tours from Chicago Trolley & Double Decker Co. (Up to 21% Off).'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/gullivers-pizza-4',
+	 'title': u"$16 for a Large Pizza with a Choice of Beer, Soda, or Salad at Gulliver's Pizza (Up to $31.45 Value)"}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/jaiyen-sushi-noodle-2-2',
+	 'original_price': u'$30',
+	 'price': u'$15',
+	 'title': u'Food and Drinks for One or Two at Jaiyen Sushi & Noodle (Up to 50% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/las-palmas-harwood-heights',
+	 'original_price': u'$20',
+	 'price': u'$13',
+	 'title': u'$13 for $20 Worth of Mexican Food at Las Palmas'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/edens-the-original-1',
+	 'title': u'Casual American Cuisine for Breakfast, Lunch, or Dinner at Eden\u2019s the Original (Up to 53% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/la-unica-food-mart',
+	 'original_price': u'$20',
+	 'price': u'$12',
+	 'title': u'$12 for $20 Worth of Latin American Cuisine for Two or More at La Unica Restaurant'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/flash-taco-south-shore',
+	 'title': u'Customizable Burrito-Bowl Meals for One or Two at Flash Taco South Shore (46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/goodyear-car-care-2',
+	 'original_price': u'$35',
+	 'price': u'$19',
+	 'title': u'One Conventional or Full Synthetic Oil Change at Goodyear Car Care (Up to 46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/midas-auto-milwaukee',
+	 'original_price': u'$39.95',
+	 'price': u'$22',
+	 'title': u'One Conventional or Synthetic Oil Change at Midas (Up to 45% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/paint-nite-200-chicago',
+	 'original_price': u'$45',
+	 'price': u'$25',
+	 'title': u'The Original Paint Nite at Local Bars (Up to 46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/bronzeville-jerk-shack',
+	 'original_price': u'$45',
+	 'price': u'$30',
+	 'title': u'Jamaican Street Food and Drinks at Bronzeville Jerk Shack (33% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/lily-nails-lounge',
+	 'original_price': u'$35',
+	 'price': u'$30',
+	 'title': u'Regular Manicure and Spa Pedicure or One No-Chip Manicure at Lily Nails Lounge (Up to 29% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/mia-figlia-1-4',
+	 'title': u'Italian Dinner or Sunday Brunch at Mia Figlia (Up to 45% Off). Three Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/little-quiapo-restaurant',
+	 'title': u'All-You-Can-Eat Buffet for Two or Four at Little Quiapo Restaurant (Up to 47% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/sugar-fly-studio-boutique-1',
+	 'original_price': u'$65',
+	 'price': u'$35',
+	 'title': u'$35 for One Sugaring Treatment at Sugar Fly Studio & Boutique ($65 Value)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/royal-nails-2',
+	 'original_price': u'$30',
+	 'price': u'$19',
+	 'title': u'No-Chip Manicures at Royal Nails (Up to 38% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/polish-nail-bar-1-3',
+	 'title': u'One Pedicure, Regular Mani-Pedi, or No-Chip Manicure and Regular Pedicure at Polish Nail Bar (Up to 35% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/adam-s-apple',
+	 'original_price': u'$5',
+	 'price': u'$1',
+	 'title': u"10% Off Any Detox Solution at Adam's Apple"}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/ragstock-nat-1',
+	 'title': u'$11 for $20 Worth of New and Recycled Apparel and Accessories at Ragstock'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/uru-swati-restaurant-1',
+	 'title': u'Vegetarian Indian Food for Dine-In or Takeout at Uru-Swati (Up to 50% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/thai-room-restaurant',
+	 'title': u'Thai Food and BYOB Drinks at Thai Room Restaurant (Up to 42% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/the-new-look-restaurant-aka-the-next-level-1-1',
+	 'original_price': u'$15',
+	 'price': u'$10.25',
+	 'title': u'$10.25 for $15 Worth of Soul Food for Lunch at The New Look Restaurant and Bar aka the Next Level'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/diamond-white-usa-104-chicago',
+	 'original_price': u'$129',
+	 'price': u'$13.99',
+	 'title': u'$13.99 for a 3D Teeth-Whitening Kit with Lifetime Gel Refills from DiamondWhiteUSA ($129 Value)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/crio-bar-restaurant-1',
+	 'title': u'Lunch for Two or More or $50 Worth of Upscale Latin American Cuisine (Up to 42% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/brazilian-bowl-2',
+	 'title': u'$12 for $20 Worth of Brazilian Fare for Delivery or Pick-Up from Brazilian Bowl'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/copymax',
+	 'price': u'$1',
+	 'title': u'$5 Off 100 Business Cards at Copymax'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/hot-vapes',
+	 'title': u'$9 for $25 Worth of E-Cigarette Accessories at Hot Vapes'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/good-morning-clinic-2',
+	 'title': u'One or Three Colon-Hydrotherapy Sessions at Good Morning Clinic (Up to 61% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/printerpix-3438',
+	 'original_price': u'$49.75',
+	 'price': u'$5',
+	 'title': u'Custom Greeting Cards and Invitations from PrinterPix'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/chicago-line-cruises-5',
+	 'original_price': u'$86',
+	 'price': u'$64',
+	 'title': u'90-Minute Architectural Boat Tour for Two at Chicago Line Cruises (Up to 26% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/chicago-trolley-and-double-decker-company-8',
+	 'original_price': u'$39',
+	 'price': u'$30.99',
+	 'title': u'24 or 48-Hour Passes to Guided Tours from Chicago Trolley & Double Decker Co. (Up to 21% Off).'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/gullivers-pizza-4',
+	 'title': u"$16 for a Large Pizza with a Choice of Beer, Soda, or Salad at Gulliver's Pizza (Up to $31.45 Value)"}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/jaiyen-sushi-noodle-2-2',
+	 'original_price': u'$30',
+	 'price': u'$15',
+	 'title': u'Food and Drinks for One or Two at Jaiyen Sushi & Noodle (Up to 50% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/las-palmas-harwood-heights',
+	 'original_price': u'$20',
+	 'price': u'$13',
+	 'title': u'$13 for $20 Worth of Mexican Food at Las Palmas'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/edens-the-original-1',
+	 'title': u'Casual American Cuisine for Breakfast, Lunch, or Dinner at Eden\u2019s the Original (Up to 53% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/la-unica-food-mart',
+	 'original_price': u'$20',
+	 'price': u'$12',
+	 'title': u'$12 for $20 Worth of Latin American Cuisine for Two or More at La Unica Restaurant'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/flash-taco-south-shore',
+	 'title': u'Customizable Burrito-Bowl Meals for One or Two at Flash Taco South Shore (46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/goodyear-car-care-2',
+	 'original_price': u'$35',
+	 'price': u'$19',
+	 'title': u'One Conventional or Full Synthetic Oil Change at Goodyear Car Care (Up to 46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/midas-auto-milwaukee',
+	 'original_price': u'$39.95',
+	 'price': u'$22',
+	 'title': u'One Conventional or Synthetic Oil Change at Midas (Up to 45% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/paint-nite-200-chicago',
+	 'original_price': u'$45',
+	 'price': u'$25',
+	 'title': u'The Original Paint Nite at Local Bars (Up to 46% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/bronzeville-jerk-shack',
+	 'original_price': u'$45',
+	 'price': u'$30',
+	 'title': u'Jamaican Street Food and Drinks at Bronzeville Jerk Shack (33% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/lily-nails-lounge',
+	 'original_price': u'$35',
+	 'price': u'$30',
+	 'title': u'Regular Manicure and Spa Pedicure or One No-Chip Manicure at Lily Nails Lounge (Up to 29% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/mia-figlia-1-4',
+	 'title': u'Italian Dinner or Sunday Brunch at Mia Figlia (Up to 45% Off). Three Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/little-quiapo-restaurant',
+	 'title': u'All-You-Can-Eat Buffet for Two or Four at Little Quiapo Restaurant (Up to 47% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/sugar-fly-studio-boutique-1',
+	 'original_price': u'$65',
+	 'price': u'$35',
+	 'title': u'$35 for One Sugaring Treatment at Sugar Fly Studio & Boutique ($65 Value)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/royal-nails-2',
+	 'original_price': u'$30',
+	 'price': u'$19',
+	 'title': u'No-Chip Manicures at Royal Nails (Up to 38% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/polish-nail-bar-1-3',
+	 'title': u'One Pedicure, Regular Mani-Pedi, or No-Chip Manicure and Regular Pedicure at Polish Nail Bar (Up to 35% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/adam-s-apple',
+	 'original_price': u'$5',
+	 'price': u'$1',
+	 'title': u"10% Off Any Detox Solution at Adam's Apple"}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/ragstock-nat-1',
+	 'title': u'$11 for $20 Worth of New and Recycled Apparel and Accessories at Ragstock'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/uru-swati-restaurant-1',
+	 'title': u'Vegetarian Indian Food for Dine-In or Takeout at Uru-Swati (Up to 50% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/thai-room-restaurant',
+	 'title': u'Thai Food and BYOB Drinks at Thai Room Restaurant (Up to 42% Off). Two Options Available.'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/the-new-look-restaurant-aka-the-next-level-1-1',
+	 'original_price': u'$15',
+	 'price': u'$10.25',
+	 'title': u'$10.25 for $15 Worth of Soul Food for Lunch at The New Look Restaurant and Bar aka the Next Level'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/diamond-white-usa-104-chicago',
+	 'original_price': u'$129',
+	 'price': u'$13.99',
+	 'title': u'$13.99 for a 3D Teeth-Whitening Kit with Lifetime Gel Refills from DiamondWhiteUSA ($129 Value)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/crio-bar-restaurant-1',
+	 'title': u'Lunch for Two or More or $50 Worth of Upscale Latin American Cuisine (Up to 42% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/brazilian-bowl-2',
+	 'title': u'$12 for $20 Worth of Brazilian Fare for Delivery or Pick-Up from Brazilian Bowl'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/copymax',
+	 'price': u'$1',
+	 'title': u'$5 Off 100 Business Cards at Copymax'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/hot-vapes',
+	 'title': u'$9 for $25 Worth of E-Cigarette Accessories at Hot Vapes'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/good-morning-clinic-2',
+	 'title': u'One or Three Colon-Hydrotherapy Sessions at Good Morning Clinic (Up to 61% Off)'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] DEBUG: Scraped from <200 https://www.livingsocial.com/local/chicago>
+	{'link': u'https://www.livingsocial.com/deals/printerpix-3438',
+	 'original_price': u'$49.75',
+	 'price': u'$5',
+	 'title': u'Custom Greeting Cards and Invitations from PrinterPix'}
+2017-08-05 20:17:03-0500 [livingsocial_spider] INFO: Closing spider (finished)
+2017-08-05 20:17:03-0500 [livingsocial_spider] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 1096,
+	 'downloader/request_count': 4,
+	 'downloader/request_method_count/GET': 4,
+	 'downloader/response_bytes': 75446,
+	 'downloader/response_count': 4,
+	 'downloader/response_status_count/200': 1,
+	 'downloader/response_status_count/301': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2017, 8, 6, 1, 17, 3, 430301),
+	 'item_scraped_count': 60,
+	 'log_count/DEBUG': 66,
+	 'log_count/INFO': 7,
+	 'response_received_count': 1,
+	 'scheduler/dequeued': 4,
+	 'scheduler/dequeued/memory': 4,
+	 'scheduler/enqueued': 4,
+	 'scheduler/enqueued/memory': 4,
+	 'start_time': datetime.datetime(2017, 8, 6, 1, 17, 1, 728964)}
+2017-08-05 20:17:03-0500 [livingsocial_spider] INFO: Spider closed (finished)
